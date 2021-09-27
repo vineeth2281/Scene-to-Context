@@ -46,8 +46,7 @@ model_resnet = Model(model_temp.input, model_temp.layers[-2].output)
 def preprocess_image(img):
     img = image.load_img(img, target_size=(224,224))
     img = image.img_to_array(img)
-    img = np.expand_dims(img, axis=0)
-    img = preprocess_input(img)
+    img = np.expand_dims(img, axis=0)  )
     return img
 
 
