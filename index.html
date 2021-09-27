@@ -1,0 +1,77 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Annotaion</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+.heading{
+	font-weight: 100;
+	font-size: 4em;
+	text-shadow: 0px 0px 0px rgb(5, 5, 5);
+}
+
+img{
+	height: 90%;
+	width: 100%;
+}
+
+.text{
+	font-size: 32px;
+	font-style: italic;
+}
+
+</style>
+
+
+</head>
+<body style="background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );">
+	<div class="container" style="background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );">
+		<div class="jumbotron" style="background-image: radial-gradient( circle farthest-corner at 14.2% 27.5%,  rgba(104,199,255,1) 0%, rgba(181,126,255,1) 90% );">
+			<div class="container">
+				<h1 class="heading"> Image Annotation</h1>
+				<p><h3><i>Contributed to <b> shellhacks 2021</b></h3></i>
+				
+						
+			</div>
+		</div>
+
+
+		<button class="GFG" type="button" class="btn btn-primary ;waves-effect waves-light" style="height:43px;width:120px ;background-image: radial-gradient( circle 788px at 0.7% 34%,  rgba(164,231,192,1) 0%, rgba(255,255,255,1) 90% );margin-bottom: 5%;margin-top: 0%;"><b>Done by</b> </button>
+		<button  class="GFG" onclick="window.location.href = 'https://www.linkedin.com/in/vineeth2281/';" type="button" class="btn btn-primary ;waves-effect waves-light" style="height:43px;width:120px ;background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));margin-bottom: 5%;margin-top: 0%;"><b>Vineeth</b> </button>
+		<br>
+		<form class="form-inline" method="POST" action="/" enctype="multipart/form-data"> 
+			<button type="button" class="btn btn-primary ;waves-effect waves-light" style="height:43px;width:80px ;background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );;"> Image </button>
+			<input class="form-control" type="file" name="userfile" placeholder="Upload picture" style="border-color: blueviolet;height: fit-content;">
+			<button type="submit" class="btn btn-primary ;waves-effect waves-light" style="height:43px;width:100px ;margin:10px;background-image: radial-gradient( circle farthest-corner at 3.1% 6.8%,  rgba(199,0,59,1) 0%, rgba(255,88,53,1) 97.7% );"> Submit</button>
+		</form>
+
+		<br>
+		<br>
+
+		{% if your_result %}
+
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="{{your_result['image']}}">
+				</div>
+				<div class="col-sm-8">
+					<button type="text" class="btn btn-primary ;waves-effect waves-light" style="height:43px;width:160px ;margin:10px;background-image: radial-gradient( circle farthest-corner at 2.9% 7.7%,  rgba(164,14,176,1) 0%, rgba(254,101,101,1) 90% );"> <i><b>Prediction results</b></i> </button>
+			 		<p> <b>{{ your_result['caption'] }} </b> </p>
+					<p><b><b>Thank you ! For using image Annotation.</p></b></p>
+				</div>
+			</div>
+		{% endif %}
+
+		<button   onclick="window.location.href = 'mailto:vineeth.artifintell@gmail.com';" type="button" class="btn btn-primary ;waves-effect waves-light" style="height:43px;width:120px ;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,95,104,1) 0%, rgba(15,156,168,1) 90% );margin-bottom: 5%;margin-top: 5%;"><b>Mail me!</b> </button>
+
+	</div>
+	
+
+</body>
+</html>
