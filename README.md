@@ -48,8 +48,10 @@ I take an image as an input from the user and it understands the image very well
 
 ## Resuts: 
 
-![](Accuracy.JPG)
-![](Accuracy.JPG)
+![](website.png)
+![](1.png)
+![](2.png)
+
 
 
 
